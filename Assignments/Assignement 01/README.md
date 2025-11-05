@@ -27,28 +27,36 @@ The main implemented functions are the following:
 - Create the date
 - Display the creation date of the card or list item
 
+All the function explained one by one:
+
 - Switch to card view
+
 cardButton.addEventListener('click', () => {...})
 Switches the task display layout to card view by removing the list-view class and adding the card-view class to the task container.
 
 - Switch to list view
+
 listButton.addEventListener('click', () => {...})
 Switches the task display layout to list view by removing the card-view class and adding the list-view class to the task container.
 
 - Add card or list item depending on the user's input
+
 addButton.addEventListener('click', () => {...})
 Creates a new task item using the text entered by the user. The task includes customizable background and text color, the current date, and a delete button. The input field is cleared after adding. If the input is empty, no task is added.
 
 - Remove card or list item 
+
 deleteElement.addEventListener('click', () => {...})
 Removes the selected task (li element) from the list when the delete button (🛒) is clicked.
 
 
 - Display the creation date of the card or list item
+
 toggleDateBtn.addEventListener('click', () => {...})
 Toggles the visibility of task dates. It updates all elements with the .date-text class, showing or hiding them depending on the showDate flag.
 
 - Create the date
+
 In the addButton function, the current date is captured with:
 
 const now = new Date();
