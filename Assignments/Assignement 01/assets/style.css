@@ -1,0 +1,262 @@
+/*Per fare il reset del css*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+
+/*mobile*/
+/* general rules */
+html{
+    font-family: sans-serif;
+    background-color: whitesmoke;
+}
+
+h1{
+    text-align: center;
+    font-size: 3rem;
+    margin: 1rem;
+}
+#site-description{
+    margin: 1rem;
+    background-color: #f7a9c3;
+    border-radius: 1rem;
+    padding: 1rem;
+    color: black;
+    box-shadow: 0 4px 15px #D16A83;
+}
+
+input, button{
+    margin: 0;
+    padding: 0;
+    border:none;
+    background: none;
+    font:inherit;
+    color:inherit;
+    outline: none;
+    box-sizing: border-box;
+}
+
+button{
+    border: 1px solid black;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.line{
+    border: none;             
+    height: 2px;            
+    background-color:#FAD1DC; 
+    margin: 1rem;           
+}
+
+/* input and add button */
+
+#add-container{
+    display: flex; 
+    gap:1rem; 
+    margin-bottom: 1rem; 
+    margin-right: 1rem; 
+}
+
+#task-input{
+    width: 100%;
+    border:2px dotted black;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    margin-left:1rem;
+}
+
+/* view list mode toggle */
+
+#view-toggle-container{
+    display:flex;
+    
+}
+
+.toggle-btn{
+    background-color: whitesmoke;
+    width: 50%;
+    margin: 1rem;
+    
+}
+
+.color-selector{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.color-selector input{
+  margin: 0.5rem;
+  width:100%;
+  border-radius: 0.5rem;
+}
+
+.testo{
+  display: flex;
+  justify-content: space-around;
+  margin: 0.5rem;
+}
+
+#select-color {
+  width: 100%;              
+  height: 3.5rem;          
+  padding: 0 1rem;          
+  border: 2px dotted black;  
+  border-radius: 3rem;      
+  background-color: whitesmoke;
+  font: inherit;          
+  font-size: 1rem;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+
+/* buttons hover */
+
+button:hover{
+    cursor:pointer;
+    transform: scale(1.08);
+}
+
+.toggle-btn:hover{
+    background-color: #FAD1DC;
+    
+}
+
+.toggle-btn:active{
+    background-color:#D16A83;
+    color: white;
+}
+
+#add-btn:hover{
+    background-color: #E37FA0;
+}
+
+#add-btn:active{
+    background-color:#D16A83;
+    color: white;
+}
+
+#select-color:hover {
+  background-color:#FAD1DC ;
+  color: rgb(0, 0, 0);
+  transform: scale(1.05);
+}
+
+#select-color:active {
+  background-color:#D16A83;
+  color: white;
+}
+
+/* delete button */
+
+.delete-btn{
+    margin-left:auto;
+    padding:0.3rem 0.5rem;
+    border-radius:0.5rem;
+    background-color:#FAD1DC;
+    color:white;
+    border: 1.5px dotted white;
+}
+
+
+
+/* card view */
+.card-view{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    padding-left: 0;
+    list-style:none;
+    gap: 1rem;
+    margin: 1rem;
+}
+
+.card-view li{
+    background-color: orange;
+    width: 100%;
+    height: 3rem;
+    border:1px solid black;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: 0.5rem;
+}
+
+/* list view */
+.list-view{
+    border:1px solid black;
+    border-radius:1rem;
+    padding:1rem 1rem 1rem 2rem;
+    background-color: rgb(255, 255, 255);
+    margin: 0.5rem;
+    
+}
+
+.list-view li{
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+/* list-card hover */
+.list-view li:hover{
+   transform: scale(1.05);
+
+}
+.card-view li:hover{
+
+  transform: scale(1.05);
+
+}
+
+
+/* text + date inside task */
+
+.date-text{
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+}
+
+
+/* tablet */
+@media only screen and (min-width:600px){
+.card-view li {
+    width: calc(40% - 0.5rem); /* 2 colonne con margine */
+    
+  }
+}
+
+
+
+/* computer */
+@media only screen and (min-width:780px){
+.card-view li {
+    width: calc(25% - 0.5rem); /* 2 colonne con margine */
+  }
+}

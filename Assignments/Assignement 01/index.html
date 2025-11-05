@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="assets/script.js" defer></script>
+    <title>🛍️ Smart Grocery List 🛍️</title>
+</head>
+<body>
+    <header>
+
+        <h1>🛍️ Smart Grocery List 🛍️</h1>
+        <hr class="line">
+        
+        <p id="site-description">
+            Organize your shopping smarter!<br>Use colors to mark which items are most urgent and which can wait. Quickly add, prioritize, and manage your grocery list with ease.
+        </p>
+
+
+        <!-- input and add button -->
+        <div id="add-container">
+            <input type="text" id="task-input" placeholder="Add new task..." required maxlength="30">
+            <button id="add-btn">
+                +
+            </button>
+        </div>
+
+
+
+        <!-- view list mode buttons -->
+        <div id="view-toggle-container">
+
+            <button id="list-view-btn" class="toggle-btn">
+                List view
+            </button>
+            <button id="card-view-btn" class="toggle-btn">
+                Card view
+            </button>
+            <button id="toggle-date-btn" class="toggle-btn">
+                Show/Hide Date
+            </button>
+
+        </div>
+
+        
+        
+        <div class="color-selector">
+            
+            <!-- <input type="color" id="select-color" value="#FFA500"> -->
+          <div class="testo">
+             <p>text color</p>
+             <input type="color" id="select-text-color"> 
+          </div>
+        
+          <select name="color" id="select-color">
+            <option value="#A8E6C1" >Less urgent</option>
+            <option value="#FCE6A8">urgent</option>
+            <option value="#F78C8C">top urgent</option>
+          </select>
+
+        </div>
+
+        <hr class="line">
+
+</header>
+
+    <main>
+        <!-- to do list -->
+        <ul id="task-list-container" class="card-view"></ul>
+    </main>
+    
+</body>
+</html>
